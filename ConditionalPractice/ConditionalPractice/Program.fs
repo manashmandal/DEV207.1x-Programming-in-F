@@ -16,6 +16,15 @@ let checknum v =
 let main argv = 
     let check = Console.ReadLine()
     let check = int check
-    printfn "%A" (checknum check)
+    let mutable checkval = true
+    let mutable i = 0
+
+    while checkval do
+        printfn "%A" (checknum i)
+        i <- i + 1
+        if i = check then 
+            checkval <- false
+
+
     Console.ReadKey();
     0
